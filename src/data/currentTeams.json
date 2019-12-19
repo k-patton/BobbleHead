@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Clemson",
+        "division": "FBS", 
+        "conference": "ACC", 
+        "conferenceNum": "1"
+    },
+    {
+        "name": "Columbia", 
+        "division": "FCS", 
+        "conference": "Ivy League", 
+        "conferenceNum": "22"
+    }, 
+    {
+        "name": "Dartmouth",
+        "division": "FCS"
+    },
+    {
+        "name": "Duke",
+        "division": "FBS"
+    },
+    {
+        "name": "East Carolina",
+        "division": "FBS"
+    },
+    {
+        "name": "Elon",
+        "division": "FCS"
+    },
+    {
+        "name": "Furman",
+        "division": "FCS"
+    },
+    {
+        "name": "Georgia State",
+        "division": "FCS"
+    },
+]

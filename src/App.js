@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./App.css";
-import { teamApi } from "./api/teamData";
+import { getScoreboard } from "./apis/scoreboard";
+const teams = require("./data/allTeams.json");
 
 class App extends React.Component {
   constructor(props) {
@@ -8,53 +9,58 @@ class App extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      items: []
+      games: []
     };
   }
 
-  componentDidMount() {
-    fetch("http://api.collegefootballdata.com/teams")
-      .then(res => res.json())
-      .then(
-        result => {
-          this.setState({
-            isLoaded: true,
-            items: result.data
-          });
-        },
-        error => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      );
+  async componentDidMount() {
+    console.log("I'm here");
+    const data = await getScoreboard("2019", "22");
+    console.log(data.events);
+    console.log(data.events[0].competitions[0].competitors[0]);
+    await this.setState({ games: data.events });
   }
   render() {
-    const { error, isLoaded, items } = this.state;
+    if (!this.state.games) {
+      return <>Loading...</>;
+    }
     return (
       <div className="App">
-        <header className="App-header">
-          <img src="./football-logo.png" className="football-logo" alt="logo" />
+        <img src="./football-logo.png" className="football-logo" alt="logo" />
+        <div>
+          <h1> It's Bobble Head Tournament Time! </h1>
+        </div>
+        <div>
+          <h1> ... </h1>
+        </div>
+        <div>
+          <h2> The current players and their schools are: </h2>
+        </div>
+        <div>
+          <h2> Add new person </h2>
+          <button> Add participant </button>
+        </div>
+        <div>
+          <h2> Add new school </h2>
+          <button> Add a university </button>
+          <h3> A list of all schools: </h3>
           <div>
-            <h1> It's Bobble Head Tournament Time! </h1>
+            <ul>
+              {this.state.games[0].competitions[0].competitors[0].team.location}
+              's score was
+              {this.state.games[0].competitions[0].competitors[0].team}
+              {/* {this.state.games.map(game => (
+                <div>
+                  <div>
+                    The teams are: {game.competitions[0].competitors[0]}
+                  </div>
+                  <div>and</div>
+                  <div>{game.competitions[0].competitors[1]} </div>
+                </div>
+              ))} */}
+            </ul>
           </div>
-          <div>
-            <h1> ... </h1>
-          </div>
-          <div>
-            <h2> The current players and their schools are: </h2>
-            {isLoaded && !error && (
-              <div>
-                <ul>
-                  {items.map(item => (
-                    <li key={item.name}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </header>
+        </div>
       </div>
     );
   }
