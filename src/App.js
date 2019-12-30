@@ -22,21 +22,16 @@ class App extends React.Component {
   }
   render() {
     if (!this.state.games) {
-      return <>Loading...</>;
+      return <h1>Loading...</h1>;
     }
     return (
       <div className="App">
         <img src="./football-logo.png" className="football-logo" alt="logo" />
         <div>
           <h1> It's Bobble Head Tournament Time! </h1>
+          <h2> The Games: </h2>
         </div>
-        <div>
-          <h1> ... </h1>
-        </div>
-        <div>
-          <h2> The current players and their schools are: </h2>
-        </div>
-        <div>
+        {/* <div>
           <h2> Add new person </h2>
           <button> Add participant </button>
         </div>
@@ -44,22 +39,26 @@ class App extends React.Component {
           <h2> Add new school </h2>
           <button> Add a university </button>
           <h3> A list of all schools: </h3>
-          <div>
-            <ul>
-              {this.state.games[0].competitions[0].competitors[0].team.location}
-              's score was
-              {this.state.games[0].competitions[0].competitors[0].team}
-              {/* {this.state.games.map(game => (
-                <div>
-                  <div>
-                    The teams are: {game.competitions[0].competitors[0]}
-                  </div>
-                  <div>and</div>
-                  <div>{game.competitions[0].competitors[1]} </div>
-                </div>
-              ))} */}
-            </ul>
-          </div>
+        */}
+        <div>
+          {this.state.games.map((game, index) => (
+            <div key={game.id}>
+              {game.name}
+              <li>The attendence was {game.competitions[0].attendance} </li>
+              <li>
+                {`${game.competitions[0].competitors[0].team.name} scored ${game.competitions[0].competitors[0].score}`}
+              </li>
+              <li>
+                {`${game.competitions[0].competitors[1].team.name} scored ${game.competitions[0].competitors[1].score}`}
+              </li>
+              <div>
+                {game.competitions[0].competitors[0].winner
+                  ? `${game.competitions[0].competitors[0].team.name} won!`
+                  : `${game.competitions[0].competitors[1].team.name} won!`}{" "}
+              </div>
+              <br />
+            </div>
+          ))}
         </div>
       </div>
     );
