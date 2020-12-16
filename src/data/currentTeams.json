@@ -1,46 +1,53 @@
 [
     {
         "name": "Clemson",
-        "displayName": "Clemson Tigers",
-        "conferenceNum": "80"
+        "displayName": "Clemson Tigers"
     },
     {
         "name": "Columbia",
-        "conferenceNum": "81"
+        "displayName": "Columbia Lions"
     },
     {
         "name": "Dartmouth",
-        "conferenceNum": "81"
+        "displayName": "Darmouth Big Green"
     },
     {
         "name": "Duke",
-        "conferenceNum": "80",
         "id": "150"
     },
     {
-        "name": "East Carolina",
-        "conferenceNum": "80"
+        "name": "East Carolina"
     },
     {
-        "name": "Elon",
-        "conferenceNum": "80"
+        "name": "Elon"
     },
     {
-        "name": "Furman",
-        "conferenceNum": "80"
+        "name": "Furman"
     },
     {
-        "name": "Georgia State",
-        "conferenceNum": "80"
+        "name": "Georgia"
+    },
+    {
+        "name": "Georgia State"
+    },
+    {
+        "name": "Georgia Tech"
+    },
+    {
+        "name": "Miami"
+    },
+    {
+        "name": "Penn"
+    },
+    {
+        "name": "Penn State"
     },
     {
         "name": "Tennessee",
-        "conferenceNum": "80",
         "id": "2633"
     },
     {
         "name": "Stanford",
-        "conferenceNum": "80",
         "id": "24"
     }
 ]

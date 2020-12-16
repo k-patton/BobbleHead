@@ -11,15 +11,21 @@ export interface Participant {
     score: number;  
 }
 
+export enum Result {
+    win="WIN", 
+    loss="LOSS", 
+    tie="TIE"
+}
 export interface TeamGameInfo {
     id: string; 
     name: string; 
     score: string; 
+    result: Result; 
 }
 
 export interface Game {
     id: string; 
     name: string; 
-    winner: TeamGameInfo
-    loser: TeamGameInfo; 
+    team1: TeamGameInfo; 
+    team2: TeamGameInfo; 
 }
