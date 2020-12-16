@@ -53,6 +53,7 @@ export const calculateWinner = async (year: string, universities: University[]) 
     }
 
     console.log(games);
+    console.log(games.length);
 
     // const relevantGames = []; 
     // universities.forEach((school) =>{
