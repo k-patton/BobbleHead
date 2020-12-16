@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Grandma", 
+        "schools": [{ "name":"Tennessee", "id": "2633"}],
+        "score": 0
+    },
+    {
+        "name": "Rebecca", 
+        "schools": [{ "name":"Duke", "id": "150"}, {"name": "Stanford", "id":"24"}],
+        "score": 0
+    },
+    {
+        "name": "Tom", 
+        "schools": [{ "name":"Dartmouth", "id": "159"}, {"name": "Stanford", "id":"24"}],
+        "score": 0
+    },
+    {
+        "name": "Gene", 
+        "schools": [{ "name":"Furman", "id":"231"}, { "name":"Georgia Tech", "id":"59"}, { "name":"Clemson", "id":"228"} ],
+        "score": 0
+    },
+    {
+        "name": "Jerry", 
+        "schools": [{ "name":"Furman", "id":"231"}, { "name":"Georgia Tech", "id":"59"}, { "name":"Miami", "id":"2390"} ],
+        "score": 0
+    }
+]

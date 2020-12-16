@@ -1,0 +1,25 @@
+.player-card {
+  border-radius: 4px;
+  box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.62);
+  flex-basis: auto;
+
+  border: 2px solid #1f1f1f;
+  /* color: white; */
+  margin: 1rem;
+  background-color: rgb(31, 31, 31);
+}
+
+.top {
+  background-color: rgba(245, 245, 245, 0.99);
+  padding: 1rem;
+}
+
+.player-card-schools {
+  border-top: 1px solid #1f1f1f;
+  padding: 1rem;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  height: auto;
+}

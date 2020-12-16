@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Rubik+Mono+One&display=swap");
+
 .App {
   text-align: center;
+  background-color: #daeedb;
+  height: 100vh;
+  font-family: "Oswald", sans-serif;
+  padding: 1rem 5rem;
 }
 
 .App-logo {
@@ -19,4 +25,14 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+h1 {
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+.players {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
