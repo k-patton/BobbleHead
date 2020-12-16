@@ -11,10 +11,15 @@ export interface Participant {
     score: number;  
 }
 
-export interface Game {
+export interface TeamGameInfo {
     id: string; 
     name: string; 
     score: string; 
-    winnerId: string; 
-    loserId: string; 
+}
+
+export interface Game {
+    id: string; 
+    name: string; 
+    winner: TeamGameInfo
+    loser: TeamGameInfo; 
 }

@@ -1,22 +1,13 @@
 import { getScoreboard } from "../apis/scoreboard";
 import { Game, University } from "../App.schema";
 
-// const getTeamScore = (teamId: string, events: any[]) =>{
-//     let games = []; 
-//     let score = 0; 
-//     for (let i = 0; i < events.length; i++){
-//         console.log(i); 
-//         if (events[i].name.includes("Georgia")){
-//             console.log(events[i].name); 
-//         }
-//         const competitors = events[i].competitions[0].competitors[0]; 
-//         if(competitors[0].id === teamId || competitors[0].id === teamId){
-//             console.log("Found a relevant game: ", events[i].name); 
-//         }
-//     }
-// }
+const checkIfRelevant = (id: string, universities: string)=>{
+
+}
+
 
 export const calculateWinner = async (year: string, universities: University[]) => {
+
     const fbs = await getScoreboard(year,"80"); 
     const fcs = await getScoreboard(year, "81"); 
 
@@ -26,28 +17,36 @@ export const calculateWinner = async (year: string, universities: University[]) 
     console.log(fbs.events[0]); 
 
     for (let i = 0; i < fbs.events.length; i++){
-        if (fbs.events[i]?.name.includes("Georgia Tech")){
+        const name = fbs.events[i].name; 
+        if (universities.some(t => name.includes(t.name))){
             console.log(fbs.events[i].name); 
             console.log(fbs.events[i].id); 
-            if(!games[fbs.events[i].id]) {
+            if(!games.find(g => g.id === fbs.events[i].id)){
                 const competitors = fbs.events[i].competitions[0].competitors; 
                 let winner, loser; 
                 if(competitors[0].winner){
-                    winner = competitors[0].id;  
-                    loser = competitors[1].id; 
+                    winner = competitors[0];  
+                    loser = competitors[1]; 
                 }
                 else{
-                    winner = competitors[1].id; 
-                    loser = competitors[0].id; 
+                    winner = competitors[1]; 
+                    loser = competitors[0]; 
                 }
 
-                games[fbs.events[i].id] = {
+                games.push({
                     id: fbs.events[i].id, 
                     name: fbs.events[i].name,
-                    winnerId: winner, 
-                    loserId: loser, 
-                    score: `${competitors[0].score} vs. ${competitors[1].score}`
-                }
+                    winner: {
+                        id: winner.id, 
+                        name: winner.team.displayName, 
+                        score: winner.score
+                    },
+                    loser: {
+                        id: loser.id, 
+                        name: loser.team.displayName, 
+                        score: loser.score
+                    }
+                })
             }
         }
     }
