@@ -18,7 +18,7 @@ export const PlayerCard: React.FC<PlayerProps> = (props: PlayerProps) => {
       </div>
       <div className="player-card-schools">
         {player.schools.map((s) => {
-          return <div> {s.name} </div>;
+          return <div key={s.name}> {s.name} </div>;
         })}
       </div>
     </div>

@@ -1,36 +1,45 @@
 [
     {
         "name": "Clemson",
-        "conferenceNum": "1"
+        "conferenceNum": "80"
     },
     {
-        "name": "Columbia", 
-        "division": "FCS", 
-        "conference": "Ivy League", 
-        "conferenceNum": "22"
-    }, 
+        "name": "Columbia",
+        "conferenceNum": "81"
+    },
     {
         "name": "Dartmouth",
-        "division": "FCS"
+        "conferenceNum": "81"
     },
     {
         "name": "Duke",
-        "division": "FBS"
+        "conferenceNum": "80",
+        "id": "150"
     },
     {
         "name": "East Carolina",
-        "division": "FBS"
+        "conferenceNum": "80"
     },
     {
         "name": "Elon",
-        "division": "FCS"
+        "conferenceNum": "80"
     },
     {
         "name": "Furman",
-        "division": "FCS"
+        "conferenceNum": "80"
     },
     {
         "name": "Georgia State",
-        "division": "FCS"
+        "conferenceNum": "80"
     },
+    {
+        "name": "Tennessee",
+        "conferenceNum": "80",
+        "id": "2633"
+    },
+    {
+        "name": "Stanford",
+        "conferenceNum": "80",
+        "id": "24"
+    }
 ]

@@ -12,12 +12,12 @@
 }
 
 .top {
-  background-color: rgba(245, 245, 245, 0.99);
+  background-color: rgb(206, 219, 194);
   padding: 1rem;
 }
 
 .player-card-schools {
-  border-top: 1px solid #1f1f1f;
+  border-top: 1px solid #d2b863;
   padding: 1rem;
   background-color: rgb(31, 31, 31);
   color: white;
