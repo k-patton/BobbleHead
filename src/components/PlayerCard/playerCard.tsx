@@ -1,13 +1,19 @@
-import React from "react";
-import { Participant } from "../../App.schema";
+import React, { useState } from "react";
+import { Participant, TeamGameInfo } from "../../App.schema";
 import "./playerCard.css";
 
 interface PlayerProps {
   player: Participant;
+  schoolList: any;
 }
 
 export const PlayerCard: React.FC<PlayerProps> = (props: PlayerProps) => {
-  const { player } = props;
+  const { player, schoolList } = props;
+
+  // const [score, setScore] = useState(0);
+
+  // let score;
+
   return (
     <div className="player-card">
       <div className="top">
@@ -18,7 +24,15 @@ export const PlayerCard: React.FC<PlayerProps> = (props: PlayerProps) => {
       </div>
       <div className="player-card-schools">
         {player.schools.map((s) => {
-          return <div key={s.name}> {s.name} </div>;
+          // console.log(s.id, schoolList[s.id] || "");
+          if (schoolList && schoolList[s.id]) {
+            return (
+              <div key={s.name}>
+                {schoolList[s.id]?.displayName || "not found"}
+                <div> Score: {schoolList[s.id]?.score || "na"} </div>
+              </div>
+            );
+          }
         })}
       </div>
     </div>

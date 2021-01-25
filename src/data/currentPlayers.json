@@ -1,27 +1,176 @@
 [
     {
-        "name": "Grandma", 
-        "schools": [{ "name":"Tennessee", "id": "2633"}],
+        "name": "Grandma",
+        "schools": [
+            {
+                "name": "Tennessee",
+                "id": "2633"
+            }
+        ],
         "score": 0
     },
     {
-        "name": "Rebecca", 
-        "schools": [{ "name":"Duke", "id": "150"}, {"name": "Stanford", "id":"24"}],
+        "name": "Rebecca",
+        "schools": [
+            {
+                "name": "Duke",
+                "id": "150"
+            },
+            {
+                "name": "Stanford",
+                "id": "24"
+            }
+        ],
         "score": 0
     },
     {
-        "name": "Tom", 
-        "schools": [{ "name":"Dartmouth", "id": "159"}, {"name": "Stanford", "id":"24"}],
+        "name": "Tom",
+        "schools": [
+            {
+                "name": "Dartmouth",
+                "id": "159"
+            },
+            {
+                "name": "Stanford",
+                "id": "24"
+            }
+        ],
         "score": 0
     },
     {
-        "name": "Gene", 
-        "schools": [{ "name":"Furman", "id":"231"}, { "name":"Georgia Tech", "id":"59"}, { "name":"Clemson", "id":"228"} ],
+        "name": "Gene",
+        "schools": [
+            {
+                "name": "Furman",
+                "id": "231"
+            },
+            {
+                "name": "Georgia Tech",
+                "id": "59"
+            },
+            {
+                "name": "Clemson",
+                "id": "228"
+            }
+        ],
         "score": 0
     },
     {
-        "name": "Jerry", 
-        "schools": [{ "name":"Furman", "id":"231"}, { "name":"Georgia Tech", "id":"59"}, { "name":"Miami", "id":"2390"} ],
+        "name": "Rosanne",
+        "schools": [
+            {
+                "name": "Furman",
+                "id": "231"
+            },
+            {
+                "name": "GA State",
+                "id": "2247"
+            }
+        ]
+    },
+    {
+        "name": "Jerry",
+        "schools": [
+            {
+                "name": "Furman",
+                "id": "231"
+            },
+            {
+                "name": "Georgia Tech",
+                "id": "59"
+            },
+            {
+                "name": "Miami",
+                "id": "2390"
+            }
+        ],
         "score": 0
+    },
+    {
+        "name": "Maria",
+        "schools": [
+            {
+                "name": "Penn State",
+                "id": "213"
+            },
+            {
+                "name": "Penn",
+                "id": "219"
+            }
+        ]
+    },
+    {
+        "name": "Chris",
+        "schools": [
+            {
+                "name": "Air Force",
+                "id": "2005"
+            },
+            {
+                "name": "NC State",
+                "id": "152"
+            }
+        ]
+    },
+    {
+        "name": "Traci",
+        "schools": [
+            {
+                "name": "Elon",
+                "id": "2210"
+            },
+            {
+                "name": "GA State",
+                "id": "2247"
+            }
+        ]
+    },
+    {
+        "name": "Stephen",
+        "schools": [
+            {
+                "name": "UGA",
+                "id": "61"
+            },
+            {
+                "name": "GA Tech",
+                "id": "59"
+            }
+        ]
+    },
+    {
+        "name": "Morgan",
+        "schools": [
+            {
+                "name": "Pitt",
+                "id": "221"
+            }
+        ]
+    },
+    {
+        "name": "Jahmahl",
+        "schools": [
+            {
+                "name": "Pitt",
+                "id": "221"
+            },
+            {
+                "name": "Towson",
+                "id": "119"
+            },
+            {
+                "name": "Memphis",
+                "id": "235"
+            }
+        ]
+    },
+    {
+        "name": "Katie",
+        "schools": [
+            {
+                "name": "Columbia",
+                "id": "171"
+            }
+        ]
     }
 ]
