@@ -2,9 +2,15 @@ export interface School {
     displayName: string; 
     score: number; 
 }
+
+export interface PlayerSchool {
+    name: string;
+    id: string;
+}
+
 export interface Participant {
     name: string; 
-    schools: string[]; 
+    schools: PlayerSchool[]; 
     score: number;  
 }
 

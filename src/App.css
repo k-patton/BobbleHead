@@ -57,3 +57,42 @@ button:active,
 button:focus {
   border: 1px solid #d2b863;
 }
+
+button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.winner-announcement {
+  background: linear-gradient(135deg, #d2b863 0%, #f4e5a1 100%);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.winner-announcement h2 {
+  color: #1f1f1f;
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.winner-announcement h3 {
+  color: #333;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.5rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

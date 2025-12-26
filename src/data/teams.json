@@ -1,78 +1,90 @@
 {
-    "228": {
-        "displayName": "Clemson Tigers",
+    "24": {
+        "displayName": "Stanford Cardinal",
         "score": 0
     },
-    "171": {
-        "displayName": "Columbia Lions",
-        "score": 0
-    },
-    "159": {
-        "displayName": "Dartmouth Big Green",
-        "score": 0
-    },
-    "150": {
-        "displayName": "Duke Blue Devils",
-        "score": 0
-    },
-    "2210": {
-        "displayName": "Elon Phoenix",
+    "58": {
+        "displayName": "South Florida Bulls",
         "score": 0
     },
     "59": {
         "displayName": "Georgia Tech Yellow Jackets",
         "score": 0
     },
-    "2390": {
-        "displayName": "Miami Hurricanes",
-        "score": 0
-    },
-    "219": {
-        "displayName": "Pennsylvania Quakers",
-        "score": 0
-    },
-    "2633": {
-        "displayName": "Tennessee Volunteers",
-        "score": 0
-    },
-    "24": {
-        "displayName": "Stanford Cardinal",
-        "score": 0
-    },
-    "231": {
-        "displayName": "Furman Paladins",
-        "score": 0
-    },
-    "213": {
-        "displayName": "Penn State Nittany Lions",
-        "score": 0
-    },
     "61": {
         "displayName": "Georgia Bulldogs",
         "score": 0
     },
-    "2247": {
-        "displayName": "Georgia State Panthers",
-        "score": 0
-    },
-    "2005": {
-        "displayName": "Air Force Falcons",
-        "score": 0
-    },
-    "221": {
-        "displayName": "Pittsburgh Panthers",
-        "score": 0
-    },
-    "152": {
-        "displayName": "NC State Wolfpack",
+    "87": {
+        "displayName": "Notre Dame Fighting Irish",
         "score": 0
     },
     "119": {
         "displayName": "Towson Tigers",
         "score": 0
     },
+    "150": {
+        "displayName": "Duke Blue Devils",
+        "score": 0
+    },
+    "152": {
+        "displayName": "NC State Wolfpack",
+        "score": 0
+    },
+    "159": {
+        "displayName": "Dartmouth Big Green",
+        "score": 0
+    },
+    "171": {
+        "displayName": "Columbia Lions",
+        "score": 0
+    },
+    "213": {
+        "displayName": "Penn State Nittany Lions",
+        "score": 0
+    },
+    "219": {
+        "displayName": "Pennsylvania Quakers",
+        "score": 0
+    },
+    "221": {
+        "displayName": "Pittsburgh Panthers",
+        "score": 0
+    },
+    "228": {
+        "displayName": "Clemson Tigers",
+        "score": 0
+    },
+    "231": {
+        "displayName": "Furman Paladins",
+        "score": 0
+    },
     "235": {
         "displayName": "Memphis Tigers",
+        "score": 0
+    },
+    "258": {
+        "displayName": "Virginia Cavaliers",
+        "score": 0
+    },
+    "2005": {
+        "displayName": "Air Force Falcons",
+        "score": 0
+    },
+    "2247": {
+        "displayName": "Georgia State Panthers",
+        "score": 0
+    },
+    "2390": {
+        "displayName": "Miami Hurricanes",
+        "score": 0
+    },
+    "2483": {
+        "displayName": "Oregon Ducks",
+        "score": 0
+    },
+    "2633": {
+        "displayName": "Tennessee Volunteers",
         "score": 0
     }
 }

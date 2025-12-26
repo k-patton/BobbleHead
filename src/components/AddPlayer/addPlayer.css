@@ -1,0 +1,91 @@
+.addPlayer {
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.add-player-form {
+  background-color: #f7f6e7;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.add-player-form h3 {
+  margin-top: 0;
+  color: #1f1f1f;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label,
+.schools-section > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #1f1f1f;
+  border-radius: 4px;
+  font-family: "Oswald", sans-serif;
+}
+
+.schools-section {
+  margin-bottom: 1.5rem;
+}
+
+.school-input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.school-input-group input {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #1f1f1f;
+  border-radius: 4px;
+  font-family: "Oswald", sans-serif;
+}
+
+.add-school-btn {
+  background-color: #d2b863;
+  color: #1f1f1f;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.add-school-btn:hover {
+  background-color: #c0a651;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.form-actions button {
+  flex: 1;
+  max-width: 150px;
+}
+
+.form-actions button[type="button"] {
+  background-color: #666;
+}
+
+.form-actions button[type="button"]:hover {
+  background-color: #555;
+}
+

@@ -4,16 +4,32 @@
   -webkit-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.62);
   -moz-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.62);
   flex-basis: auto;
-
   border: 2px solid #1f1f1f;
-  /* color: white; */
   margin: 1rem;
   background-color: rgb(31, 31, 31);
+  min-width: 250px;
+  transition: transform 0.2s;
+}
+
+.player-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 3px 8px 10px -1px rgba(0, 0, 0, 0.72);
 }
 
 .top {
   background-color: rgb(247, 246, 231);
   padding: 1rem;
+}
+
+.player-card-name {
+  margin: 0.5rem 0;
+}
+
+.player-total-score {
+  font-size: 1.2rem;
+  color: #d2b863;
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
 .player-card-schools {
@@ -22,4 +38,27 @@
   background-color: rgb(31, 31, 31);
   color: white;
   height: auto;
+}
+
+.school-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.school-name {
+  flex: 1;
+  text-align: left;
+}
+
+.school-score {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #d2b863;
+  min-width: 40px;
+  text-align: right;
 }

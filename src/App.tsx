@@ -11,54 +11,85 @@ let schools = require("./data/teams.json");
 const App: React.FC = () => {
   const [universities, setUniversities] = useState<any>(schools);
   const [players, setPlayers] = useState<Participant[]>(people);
+  const [isCalculating, setIsCalculating] = useState(false);
+  const [winner, setWinner] = useState<Participant | null>(null);
+
+  const calculatePlayerScores = (universities: any): Participant[] => {
+    return players.map((player) => {
+      let totalScore = 0;
+      player.schools.forEach((school: any) => {
+        if (universities[school.id]) {
+          totalScore += universities[school.id].score;
+        }
+      });
+      return { ...player, score: totalScore };
+    });
+  };
 
   const handleFindWinner = async () => {
-    const newUniversities = await calculateWinner(
-      "2020",
-      universities,
-      players
-    );
-    setUniversities(newUniversities);
-    console.log(newUniversities);
-    // let winner;
-    // for (let i = 0; i < players.length; i++) {
-    //   let score = 0;
-    //   let player = players[i];
-    //   for (let j = 0; j < player.schools.length; j++) {
-    //     let id = player.schools[j].id;
-    //     console.log(id, "score");
-    //     if (newUniversities) {
-    //       console.log(newUniversities[id].score);
-    //     } else {
-    //       console.log("not defined");
-    //       console.log(newUniversities);
-    //     }
-    //     // score += newUniversities[players[i].schools[j].id].score;
-    //   }
+    setIsCalculating(true);
+    try {
+      const newUniversities = await calculateWinner(
+        "2025",
+        universities,
+        players
+      );
+      setUniversities(newUniversities);
 
-    //   // console.log(score);
-    // }
-    // // console.log("new", universities);
+      // Calculate player scores
+      const updatedPlayers = calculatePlayerScores(newUniversities);
+      setPlayers(updatedPlayers);
+
+      // Find the winner (highest score)
+      const winningPlayer = updatedPlayers.reduce((prev, current) =>
+        current.score > prev.score ? current : prev
+      );
+      setWinner(winningPlayer);
+
+      console.log("Updated Universities:", newUniversities);
+      console.log("Player Scores:", updatedPlayers);
+      console.log("Winner:", winningPlayer);
+    } catch (error) {
+      console.error("Error calculating winner:", error);
+    } finally {
+      setIsCalculating(false);
+    }
   };
 
   return (
     <div className="App">
       <div>
-        <h1> It's Bobble Head Tournament Time! </h1>
-        <h2> Current Players: </h2>
+        <h1>🏈 It's Bobble Head Tournament Time! 🏈</h1>
+        
+        {winner && (
+          <div className="winner-announcement">
+            <h2>🏆 Winner: {winner.name}! 🏆</h2>
+            <h3>Final Score: {winner.score} points</h3>
+          </div>
+        )}
+
+        <h2>Current Players:</h2>
         <div className="players">
-          {players.map((p) => {
-            return (
-              <PlayerCard key={p.name} player={p} schoolList={universities} />
-            );
-          })}
+          {players
+            .sort((a, b) => b.score - a.score)
+            .map((p) => {
+              return (
+                <PlayerCard key={p.name} player={p} schoolList={universities} />
+              );
+            })}
         </div>
 
-        <button onClick={handleFindWinner}>Find the winner!</button>
+        <button onClick={handleFindWinner} disabled={isCalculating}>
+          {isCalculating ? "Calculating..." : "Find the winner!"}
+        </button>
       </div>
 
       <div>
-        <AddPlayer />
+        <AddPlayer 
+          onAddPlayer={(newPlayer: Participant) => {
+            setPlayers([...players, newPlayer]);
+          }}
+        />
       </div>
     </div>
   );

@@ -113,15 +113,11 @@
         ]
     },
     {
-        "name": "Traci",
+        "name": "Jackie",
         "schools": [
             {
-                "name": "Elon",
-                "id": "2210"
-            },
-            {
-                "name": "GA State",
-                "id": "2247"
+                "name": "Notre Dame",
+                "id": "87"
             }
         ]
     },
@@ -139,11 +135,28 @@
         ]
     },
     {
+        "name": "Joy",
+        "schools": [
+            {
+                "name": "University of Oregon",
+                "id": "2483"
+            },
+            {
+                "name": "University of South Florida",
+                "id": "58"
+            }
+        ]
+    },
+    {
         "name": "Morgan",
         "schools": [
             {
                 "name": "Pitt",
                 "id": "221"
+            },
+            {
+                "name": "George Washington University",
+                "id": "1000025"
             }
         ]
     },
@@ -170,6 +183,15 @@
             {
                 "name": "Columbia",
                 "id": "171"
+            }
+        ]
+    },
+    {
+        "name": "Shabad",
+        "schools": [
+            {
+                "name": "UVA",
+                "id": "258"
             }
         ]
     }
