@@ -190,6 +190,8 @@ export const calculateWinner = async (
         // Call callback for visual update
         if (onGameProcessed) {
             await onGameProcessed(game, i + 1, relevantGames.length);
+            // Add delay between games for better readability
+            await new Promise(resolve => setTimeout(resolve, 2500));
         }
     }
 

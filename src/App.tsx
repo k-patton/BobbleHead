@@ -127,62 +127,66 @@ const App: React.FC = () => {
       )}
       
       <div className="App">
-      <div>
-        <h1>🏈 It's Bobble Head Tournament Time! 🏈</h1>
-        
-        {winner && (
-          <div className="winner-announcement">
-            <h2>🏆 Winner: {winner.name}! 🏆</h2>
-            <h3>Final Score: {winner.score} points</h3>
-          </div>
-        )}
+        <header className="app-header-fixed">
+          <h1>🏈 It's Bobble Head Tournament Time! 🏈</h1>
+        </header>
 
-        {winners.length > 0 && (
-          <div className="winner-announcement tie">
-            <h2>🏆 It's a Tie! 🏆</h2>
-            <h3>
-              {winners.map((w, i) => (
-                <span key={w.name}>
-                  {i > 0 && (i === winners.length - 1 ? " and " : ", ")}
-                  {w.name}
-                </span>
-              ))}{" "}
-              have {winners[0].score} points
-            </h3>
-          </div>
-        )}
+        <div className="app-content">
+          {winner && (
+            <div className="winner-announcement">
+              <h2>Winner: {winner.name}!</h2>
+              <h3>Final Score: {winner.score} points</h3>
+            </div>
+          )}
 
-        <h2>Current Players:</h2>
-        <div className="players">
-          {players
-            .sort((a, b) => b.score - a.score)
-            .map((p) => {
-              return (
-                <PlayerCard 
-                  key={p.name} 
-                  player={p} 
-                  schoolList={universities}
-                  gamesByTeam={gamesByTeam}
-                />
-              );
-            })}
+          {winners.length > 0 && (
+            <div className="winner-announcement tie">
+              <h2>It's a Tie!</h2>
+              <h3>
+                {winners.map((w, i) => (
+                  <span key={w.name}>
+                    {i > 0 && (i === winners.length - 1 ? " and " : ", ")}
+                    {w.name}
+                  </span>
+                ))}{" "}
+                have {winners[0].score} points
+              </h3>
+            </div>
+          )}
+
+          <h2>Current Players:</h2>
+          <div className="players">
+            {players
+              .sort((a, b) => b.score - a.score)
+              .map((p) => {
+                return (
+                  <PlayerCard 
+                    key={p.name} 
+                    player={p} 
+                    schoolList={universities}
+                    gamesByTeam={gamesByTeam}
+                  />
+                );
+              })}
+          </div>
+
+          <GamesAccordion games={allRelevantGames} universities={universities} />
+
+          <div>
+            <AddPlayer 
+              onAddPlayer={(newPlayer: Participant) => {
+                setPlayers([...players, newPlayer]);
+              }}
+            />
+          </div>
         </div>
 
-        <button onClick={handleFindWinner} disabled={isCalculating}>
-          {isCalculating ? "Calculating..." : "Find the winner!"}
-        </button>
-
-        <GamesAccordion games={allRelevantGames} universities={universities} />
+        <footer className="app-footer-fixed">
+          <button onClick={handleFindWinner} disabled={isCalculating}>
+            {isCalculating ? "Calculating..." : "Find the winner!"}
+          </button>
+        </footer>
       </div>
-
-      <div>
-        <AddPlayer 
-          onAddPlayer={(newPlayer: Participant) => {
-            setPlayers([...players, newPlayer]);
-          }}
-        />
-      </div>
-    </div>
     </>
   );
 };

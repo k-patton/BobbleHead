@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Game } from "../../App.schema";
 import "./GameProcessingModal.css";
 
@@ -13,6 +13,30 @@ export const GameProcessingModal: React.FC<GameProcessingModalProps> = ({
   gamesProcessed,
   totalGames,
 }) => {
+  const [showWinnerHighlight, setShowWinnerHighlight] = useState(false);
+  const [showWinnerText, setShowWinnerText] = useState(false);
+
+  useEffect(() => {
+    // Reset states when game changes
+    setShowWinnerHighlight(false);
+    setShowWinnerText(false);
+
+    // Show winner highlight after 1000ms
+    const highlightTimer = setTimeout(() => {
+      setShowWinnerHighlight(true);
+    }, 1000);
+
+    // Show winner text after 1800ms
+    const textTimer = setTimeout(() => {
+      setShowWinnerText(true);
+    }, 1800);
+
+    return () => {
+      clearTimeout(highlightTimer);
+      clearTimeout(textTimer);
+    };
+  }, [game]);
+
   if (!game) return null;
 
   const formatDate = (dateString: string) => {
@@ -50,27 +74,31 @@ export const GameProcessingModal: React.FC<GameProcessingModalProps> = ({
           <div className="game-date-display">{formatDate(game.date)}</div>
           
           <div className="matchup-display">
-            <div className={`team ${game.team1.result === "WIN" ? "winner" : ""}`}>
+            <div className={`team ${game.team1.result === "WIN" && showWinnerHighlight ? "winner" : ""}`}>
               <div className="team-name">{game.team1.name}</div>
               <div className="team-score">{game.team1.score}</div>
             </div>
             
             <div className="vs-divider">vs</div>
             
-            <div className={`team ${game.team2.result === "WIN" ? "winner" : ""}`}>
+            <div className={`team ${game.team2.result === "WIN" && showWinnerHighlight ? "winner" : ""}`}>
               <div className="team-name">{game.team2.name}</div>
               <div className="team-score">{game.team2.score}</div>
             </div>
           </div>
 
-          {winner ? (
-            <div className="result-display">
-              🏆 {winner.name} wins!
-            </div>
-          ) : (
-            <div className="result-display tie-result">
-              It's a tie!
-            </div>
+          {showWinnerText && (
+            <>
+              {winner ? (
+                <div className="result-display">
+                  🏆 {winner.name} wins!
+                </div>
+              ) : (
+                <div className="result-display tie-result">
+                  It's a tie!
+                </div>
+              )}
+            </>
           )}
         </div>
 
