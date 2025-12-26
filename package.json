@@ -16,7 +16,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-teams": "node scripts/generateTeams.js"
+    "generate-teams": "node scripts/generateTeams.js",
+    "generate-all-teams": "node scripts/generateAllTeams.js",
+    "record-games": "node scripts/recordAllGames.js",
+    "get-cfd-teams": "node scripts/getCollegeFootballDataTeams.js",
+    "update-player-ids": "node scripts/updatePlayerIds.js",
+    "generate-teams-cfd": "node scripts/generateTeamsCFD.js",
+    "test-cfd-api": "node scripts/testCFDApi.js"
   },
   "eslintConfig": {
     "extends": "react-app"

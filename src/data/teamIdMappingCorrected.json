@@ -1,0 +1,27 @@
+{
+  "Air Force": { "id": 2005, "school": "Air Force" },
+  "Clemson": { "id": 228, "school": "Clemson" },
+  "Columbia": { "id": 171, "school": "Columbia" },
+  "Dartmouth": { "id": 159, "school": "Dartmouth" },
+  "Duke": { "id": 150, "school": "Duke" },
+  "Elon": { "id": 2210, "school": "Elon" },
+  "Furman": { "id": 231, "school": "Furman" },
+  "GA State": { "id": 2247, "school": "Georgia State" },
+  "GA Tech": { "id": 59, "school": "Georgia Tech" },
+  "Georgia Tech": { "id": 59, "school": "Georgia Tech" },
+  "Memphis": { "id": 235, "school": "Memphis" },
+  "Miami": { "id": 2390, "school": "Miami" },
+  "NC State": { "id": 152, "school": "NC State" },
+  "Notre Dame": { "id": 87, "school": "Notre Dame" },
+  "Penn": { "id": 219, "school": "Pennsylvania" },
+  "Penn State": { "id": 213, "school": "Penn State" },
+  "Pitt": { "id": 221, "school": "Pittsburgh" },
+  "Stanford": { "id": 24, "school": "Stanford" },
+  "Tennessee": { "id": 2633, "school": "Tennessee" },
+  "Towson": { "id": 119, "school": "Towson" },
+  "UGA": { "id": 61, "school": "Georgia" },
+  "UVA": { "id": 258, "school": "Virginia" },
+  "University of Oregon": { "id": 2483, "school": "Oregon" },
+  "University of South Florida": { "id": 58, "school": "South Florida" }
+}
+

@@ -1,0 +1,102 @@
+{
+  "Air Force": {
+    "id": 2005,
+    "school": "Air Force",
+    "oldId": "2005"
+  },
+  "Clemson": {
+    "id": 228,
+    "school": "Clemson",
+    "oldId": "228"
+  },
+  "Columbia": {
+    "id": 2080,
+    "school": "British Columbia",
+    "oldId": "171"
+  },
+  "Dartmouth": {
+    "id": 159,
+    "school": "Dartmouth",
+    "oldId": "159"
+  },
+  "Duke": {
+    "id": 150,
+    "school": "Duke",
+    "oldId": "150"
+  },
+  "Furman": {
+    "id": 231,
+    "school": "Furman",
+    "oldId": "231"
+  },
+  "Georgia Tech": {
+    "id": 61,
+    "school": "Georgia",
+    "oldId": "59"
+  },
+  "Memphis": {
+    "id": 235,
+    "school": "Memphis",
+    "oldId": "235"
+  },
+  "Miami": {
+    "id": 2390,
+    "school": "Miami",
+    "oldId": "2390"
+  },
+  "NC State": {
+    "id": 152,
+    "school": "NC State",
+    "oldId": "152"
+  },
+  "Notre Dame": {
+    "id": 87,
+    "school": "Notre Dame",
+    "oldId": "87"
+  },
+  "Penn": {
+    "id": 2291,
+    "school": "Indiana-Pennsylvania",
+    "oldId": "219"
+  },
+  "Penn State": {
+    "id": 213,
+    "school": "Penn State",
+    "oldId": "213"
+  },
+  "Pitt": {
+    "id": 221,
+    "school": "Pittsburgh",
+    "oldId": "221"
+  },
+  "Stanford": {
+    "id": 24,
+    "school": "Stanford",
+    "oldId": "24"
+  },
+  "Tennessee": {
+    "id": 2064,
+    "school": "Bethel University Tennessee",
+    "oldId": "2633"
+  },
+  "Towson": {
+    "id": 119,
+    "school": "Towson",
+    "oldId": "119"
+  },
+  "UVA": {
+    "id": 2842,
+    "school": "UVA Wise",
+    "oldId": "258"
+  },
+  "University of Oregon": {
+    "id": 2483,
+    "school": "Oregon",
+    "oldId": "2483"
+  },
+  "University of South Florida": {
+    "id": 57,
+    "school": "Florida",
+    "oldId": "58"
+  }
+}

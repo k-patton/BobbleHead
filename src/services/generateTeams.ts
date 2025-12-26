@@ -121,7 +121,7 @@ export const generateAndSaveTeams = async (year: string): Promise<void> => {
 
 // If run directly as a script
 if (require.main === module) {
-    const year = process.argv[2] || "2024";
+    const year = process.argv[2] || "2025";
     console.log(`Generating teams for year ${year}...`);
     generateAndSaveTeams(year)
         .then(() => {

@@ -126,7 +126,7 @@ const generateAndSaveTeams = async (year) => {
 };
 
 // Run the script
-const year = process.argv[2] || "2024";
+const year = process.argv[2] || "2025";
 console.log(`\n🏈 Generating teams for year ${year}...\n`);
 
 generateAndSaveTeams(year)

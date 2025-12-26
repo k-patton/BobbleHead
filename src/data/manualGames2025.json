@@ -1,0 +1,20 @@
+[
+  {
+    "id": "manual-furman-clemson-2025",
+    "date": "2025-11-22T21:30:00Z",
+    "name": "Furman Paladins at Clemson Tigers",
+    "team1": {
+      "id": "231",
+      "name": "Furman Paladins",
+      "score": "10",
+      "result": "LOSS"
+    },
+    "team2": {
+      "id": "228",
+      "name": "Clemson Tigers",
+      "score": "45",
+      "result": "WIN"
+    }
+  }
+]
+

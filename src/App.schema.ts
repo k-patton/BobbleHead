@@ -29,6 +29,7 @@ export interface TeamGameInfo {
 export interface Game {
     id: string; 
     name: string; 
+    date: string;
     team1: TeamGameInfo; 
     team2: TeamGameInfo; 
 }
